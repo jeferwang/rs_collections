@@ -4,7 +4,7 @@ pub struct LinkedList<T> {
 
 type Link<T> = Option<Box<Node<T>>>;
 
-pub struct Node<T> {
+pub(crate) struct Node<T> {
     pub(crate) elem: T,
     pub(crate) next: Link<T>,
 }

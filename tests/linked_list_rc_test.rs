@@ -1,8 +1,8 @@
-use rs_collections::LinkedListRc;
+use rs_collections::linked_list_rc::LinkedList;
 
 #[test]
 fn basics() {
-    let list = LinkedListRc::new();
+    let list = LinkedList::new();
     assert_eq!(list.head(), None);
 
     let list = list.prepend(1).prepend(2).prepend(3);
@@ -24,7 +24,7 @@ fn basics() {
 
 #[test]
 fn iter() {
-    let list = LinkedListRc::new().prepend(1).prepend(2).prepend(3);
+    let list = LinkedList::new().prepend(1).prepend(2).prepend(3);
     let mut iter = list.iter();
     assert_eq!(iter.next(), Some(&3));
     assert_eq!(iter.next(), Some(&2));

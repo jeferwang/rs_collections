@@ -1,5 +1,4 @@
-use crate::linked_list::LinkedList;
-use crate::Node;
+use crate::linked_list::{LinkedList, Node};
 
 pub struct IntoIter<T>(LinkedList<T>);
 
