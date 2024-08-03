@@ -56,7 +56,6 @@ fn long_list() {
     drop(list);
 }
 
-
 #[test]
 fn into_iter() {
     let mut list = LinkedList::new();

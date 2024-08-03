@@ -23,6 +23,22 @@ fn basics() {
 }
 
 #[test]
+fn head() {
+    let list = LinkedList::new();
+    let list = list.prepend(666);
+    assert_eq!(list.head(), Some(&666))
+}
+
+#[test]
+fn long_list() {
+    let mut list = LinkedList::new();
+    for i in 0..100000 {
+        list = list.prepend(i);
+    }
+    drop(list);
+}
+
+#[test]
 fn iter() {
     let list = LinkedList::new().prepend(1).prepend(2).prepend(3);
     let mut iter = list.iter();
